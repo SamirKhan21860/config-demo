@@ -8,9 +8,10 @@ with open('config.yaml', 'r') as file:
     config_data = yaml.safe_load(file)
     
 # Route to display information from the configuration file
-@app.route('/')
+@app.route('/', methods=['Get'])
 def index():
-    return render_template('index.html', config_data=config_data)
+    
+    return render_template("index.html", config_data=config_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

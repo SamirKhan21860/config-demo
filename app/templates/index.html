@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <title>{{ config_data.app_name }} - Home</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>{{ config_data.app_name }}</h1>
+            <p>Version: {{ config_data.version }}</p>
+            <p>Backend Language: {{ config_data.backend_language }}</p>
+            <p>Frontend Language: {{ config_data.fronted_language }}</p>
+            <h2>Database Settings</h2>
+            <ul>
+                <li>Name: {{ config_data.database.name }}</li>
+                <li>Host: {{ config_data.database.host }}</li>
+                <li>Port: {{ config_data.database.port }}</li>
+                <li>Username: {{ config_data.database.credentials.username }}</li>
+                <li>Password: {{ config_data.database.credentials.password }}</li>
+            </ul>
+        </div>
+    </body>
+</html>
