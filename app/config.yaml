@@ -1,0 +1,11 @@
+app_name: MyDemoApp
+version: 1.0
+backend_language: Python
+fronted_language: HTML + Jinja
+database:
+  name: demo_db
+  host: localhost
+  port: 5432
+  credentials:
+    username: admin
+    password: secret
